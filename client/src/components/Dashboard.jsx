@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import socketClient from "socket.io-client";
 import Messages from "./Messages";
 import MessageControl from "./MessageControl";
-const SERVER = "http://localhost:5000";
+const SERVER = "";
 
 const Dashboard = ({ user, logout }) => {
   const [messages, setMessages] = useState([]);

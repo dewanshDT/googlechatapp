@@ -51,11 +51,9 @@ io.on("connection", (socket) => {
   });
 });
 
-if (process.env.NODE_ENV === "production") {
   app.get("/", (req, res) => {
     app.use(express.static("client/build"));
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   })
-}
 
 server.listen(PORT, () => console.log(`LISTENING ON PORT ${PORT} in ${process.env.NODE_ENV}`));
