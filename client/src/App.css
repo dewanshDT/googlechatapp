@@ -27,6 +27,12 @@ body {
   font-family: "Roboto";
 }
 
+/* #root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+} */
+
 input {
   background: var(--itembg);
   border-radius: 0.4em;
@@ -85,7 +91,7 @@ input {
 /* Dashboard */
 
 .dashboard {
-  min-width: 600px;
+  width: 600;
   min-height: 400px;
   max-height: 80vh;
   background: var(--secondrybg);
@@ -155,4 +161,19 @@ input {
 .message-control input {
   flex-grow: 1;
   margin: 0.3em;
+}
+
+@media (max-width: 650px) {
+  .dashboard {
+    min-width: none;
+    max-height: none;
+    min-height: none;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .head h1 {
+    font-size: 1rem;
+  }
 }
